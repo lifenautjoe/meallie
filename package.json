@@ -20,7 +20,8 @@
     "npm": "^6.14.4",
     "nuxt-edge": "^2.13.0-26451376.7845509d",
     "nuxt-material-design-icons": "^1.0.4",
-    "vue-chimera": "^3.0.2"
+    "vue-chimera": "^3.0.2",
+    "vue-content-loading": "^1.6.0"
   },
   "devDependencies": {
     "@nuxtjs/router": "^1.5.0",

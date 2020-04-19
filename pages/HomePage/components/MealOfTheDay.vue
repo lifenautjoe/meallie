@@ -1,9 +1,12 @@
 <template>
   <div>
-    <span v-if="getRandomMeal.loading">Is loading</span>
+    <meallie-meal-card-skeleton v-if="getRandomMeal.loading"></meallie-meal-card-skeleton>
     <div v-else-if="failedToGetRandomMeal">
+      <span>
+        Failed to retrieve meal.
+      </span>
       <button class="button" @click="refreshMeal">
-        Retry
+        Try again
       </button>
     </div>
     <meallie-meal-card v-else :meal="getRandomMeal.data"></meallie-meal-card>
@@ -12,9 +15,10 @@
 
 <script>
   import MeallieMealCard from "../../../components/MealCard";
+  import MeallieMealCardSkeleton from "../../../components/meal-card-skeleton/MealCardSkeleton";
   export default {
     name: 'MeallieMealOfTheDay',
-    components: {MeallieMealCard},
+    components: {MeallieMealCardSkeleton, MeallieMealCard},
     data(){
       return {
         failedToGetRandomMeal: false

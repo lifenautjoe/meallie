@@ -20,6 +20,7 @@
 
 <style lang="scss" scoped>
   .home-page-meal-of-the-day{
+    width: 100%;
     max-width: 450px;
   }
 </style>
