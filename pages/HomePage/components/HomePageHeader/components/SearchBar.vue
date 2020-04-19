@@ -9,6 +9,7 @@
           placeholder="Search meals..."
           v-debounce:500ms="onSearchQueryChanged"
           v-model="searchQuery">
+
       </div>
     </div>
   </div>

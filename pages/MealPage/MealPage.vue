@@ -42,6 +42,20 @@
 
   export default {
     name: 'MealPage',
+    head() {
+
+      let title;
+
+      if(this.meal){
+        title = this.meal.strMeal;
+      } else{
+        title = 'Loading... | Meallie'
+      }
+
+      return {
+        title: title
+      };
+    },
     components: {
       MeallieMealPageSkeleton,
       MeallieMealPageArea,
