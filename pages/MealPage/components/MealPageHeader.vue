@@ -4,7 +4,7 @@
       <nav class="navbar">
         <div class="container">
           <div class="navbar-brand has-padding-20">
-            <nuxt-link to="/" class="is-flex align-items-center navbar-item">
+            <nuxt-link to="/" class="is-flex align-items-center navbar-item has-background-black-bis">
               <meallie-logo class="has-text-white"></meallie-logo>
             </nuxt-link>
           </div>
@@ -47,7 +47,7 @@
 </style>
 
 <script>
-  import MeallieLogo from "../../../../components/Logo";
+  import MeallieLogo from "../../../components/Logo";
 
   export default {
     name: 'MeallieMealPageHeader',
