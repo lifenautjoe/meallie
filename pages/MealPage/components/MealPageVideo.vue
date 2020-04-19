@@ -3,7 +3,6 @@
     <h2 class="has-padding-bottom-20">Step-by-step video</h2>
     <div class="has-padding-10">
       <youtube :video-id="youtubeVideoId" ref="youtube" :fit-parent="true" :resize="true"></youtube>
-
     </div>
   </div>
 </template>

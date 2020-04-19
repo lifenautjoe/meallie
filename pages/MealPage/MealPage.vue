@@ -1,18 +1,21 @@
 <template>
-  <div v-if="meal">
-    <meallie-meal-page-header :meal="meal"></meallie-meal-page-header>
-    <section class="section container">
-      <div class="columns">
-        <div class="column has-padding-30">
-          <meallie-meal-page-area :meal="meal"></meallie-meal-page-area>
-          <meallie-meal-page-ingredients :meal="meal"></meallie-meal-page-ingredients>
+  <div>
+    <meallie-meal-page-skeleton v-if="getMeal.loading"></meallie-meal-page-skeleton>
+    <div v-if="meal">
+      <meallie-meal-page-header :meal="meal"></meallie-meal-page-header>
+      <section class="section container">
+        <div class="columns">
+          <div class="column has-padding-30">
+            <meallie-meal-page-area :meal="meal"></meallie-meal-page-area>
+            <meallie-meal-page-ingredients :meal="meal"></meallie-meal-page-ingredients>
+          </div>
+          <div class="column has-padding-30" v-if="hasVideo">
+            <meallie-meal-page-instructions :meal="meal"></meallie-meal-page-instructions>
+          </div>
         </div>
-        <div class="column has-padding-30" v-if="hasVideo">
-          <meallie-meal-page-instructions :meal="meal"></meallie-meal-page-instructions>
-        </div>
-      </div>
-      <meallie-meal-page-video :meal="meal" class="has-padding-30"></meallie-meal-page-video>
-    </section>
+        <meallie-meal-page-video :meal="meal" class="has-padding-30"></meallie-meal-page-video>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -25,10 +28,12 @@
   import MeallieMealPageInstructions from "./components/MealPageInstructions";
   import MeallieMealPageVideo from "./components/MealPageVideo";
   import MeallieMealPageArea from "./components/MealPageArea";
+  import MeallieMealPageSkeleton from "./components/MealPageSkeleton";
 
   export default {
     name: 'MealPage',
     components: {
+      MeallieMealPageSkeleton,
       MeallieMealPageArea,
       MeallieMealPageVideo, MeallieMealPageInstructions, MeallieMealPageIngredients, MeallieMealPageHeader},
     created() {
