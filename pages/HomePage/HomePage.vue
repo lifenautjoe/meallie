@@ -1,6 +1,6 @@
 <template>
   <div>
-    <meallie-header @onSearchBarSearch="onHeaderSearchBarSearch"></meallie-header>
+    <meallie-home-page-header @onSearchBarSearch="onHeaderSearchBarSearch"></meallie-home-page-header>
     <div class="container has-padding-40-touch" v-if="hasSearch">
       <meallie-search-meal-results-skeleton
         v-if="getSearchResults.loading && !getSearchResults.data"></meallie-search-meal-results-skeleton>
@@ -14,19 +14,23 @@
 
 <script>
   import MeallieMealOfTheDay from "./components/SplashScreen/components/MealOfTheDay";
-  import MeallieHeader from "../../components/Header/Header";
-  import MeallieSearchBar from "../../components/Header/components/SearchBar";
+  import MeallieSearchBar from "./components/HomePageHeader/components/SearchBar";
   import MeallieSplashScreen from "./components/SplashScreen/SplashScreen";
   import MeallieSearchMealResults from "./components/SearchMealResults";
   import MeallieSearchMealResultsSkeleton from "./components/SearchMealResultsSkeleton";
   import MeallieSearchMealNoResults from "./components/SearchMealNoResults";
+  import MeallieHomePageHeader from "./components/HomePageHeader/HomePageHeader";
 
   export default {
     name: 'MollieHomePage',
     components: {
+      MeallieHomePageHeader,
       MeallieSearchMealNoResults,
       MeallieSearchMealResultsSkeleton,
-      MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay
+      MeallieSearchMealResults,
+      MeallieSplashScreen,
+      MeallieSearchBar,
+      MeallieMealOfTheDay
     },
     data() {
       return {

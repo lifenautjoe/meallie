@@ -17,10 +17,10 @@
 </template>
 
 <script>
-  import MeallieLogo from "../Logo";
+  import MeallieLogo from "../../../../components/Logo";
   import MeallieSearchBar from "./components/SearchBar";
   export default {
-    name: 'MeallieHeader',
+    name: 'MeallieHomePageHeader',
     components: {MeallieSearchBar, MeallieLogo},
     methods: {
       onSearchBarSearch(queryString){
