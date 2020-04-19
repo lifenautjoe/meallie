@@ -4,7 +4,7 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Meallie.',
+    title: 'Fresh meals | Meallie',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
@@ -32,6 +32,7 @@ export default {
     '~/plugins/vue-chimera',
     '~/plugins/vue-debounce',
     '~/plugins/vue-youtube',
+    '~/plugins/font-awesome',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -45,7 +46,6 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'nuxt-material-design-icons'
   ],
   /*
   ** Axios module configuration
