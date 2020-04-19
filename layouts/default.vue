@@ -1,7 +1,6 @@
 <template>
   <div class="meallie">
     <div class="meallie-content">
-      <meallie-header></meallie-header>
       <nuxt></nuxt>
     </div>
     <meallie-footer></meallie-footer>

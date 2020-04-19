@@ -1,34 +1,38 @@
 <template>
-  <section class="hero is-large">
-    <div class="hero-body">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-flex justify-center align-items-center">
-            <div class="content is-large">
-              <h1 class="title">Try something new.</h1>
-              <h2 class="subtitle has-text-grey">A fresh recipe everytime.</h2>
-            </div>
-          </div>
-          <div class="column is-flex justify-center align-items-center">
-            <meallie-meal-of-the-day class="home-page-meal-of-the-day"></meallie-meal-of-the-day>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div>
+    <meallie-header @onSearchBarSearch="onSearchBarSearch"></meallie-header>
+    <meallie-search-meal-results v-if="hasSearch"></meallie-search-meal-results>
+    <meallie-splash-screen v-else></meallie-splash-screen>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-  .home-page-meal-of-the-day{
-    width: 100%;
-    max-width: 450px;
-  }
+
 </style>
 
 <script>
-import MeallieMealOfTheDay from "./components/MealOfTheDay";
+import MeallieMealOfTheDay from "./components/SplashScreen/components/MealOfTheDay";
+import MeallieHeader from "../../components/Header/Header";
+import MeallieSearchBar from "../../components/Header/components/SearchBar";
+import MeallieSplashScreen from "./components/SplashScreen/SplashScreen";
+import MeallieSearchMealResults from "./components/SearchMealResults";
 export default {
   name: 'MollieHomePage',
-  components: {MeallieMealOfTheDay},
+  components: {MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay},
+  data(){
+    return {
+      hasSearch: false
+    }
+  },
+  methods:{
+    onSearchBarSearch(queryString){
+      if(!queryString) {
+        this.hasSearch = false;
+        return;
+      }
+
+      this.hasSearch = true;
+    }
+  }
 }
 </script>

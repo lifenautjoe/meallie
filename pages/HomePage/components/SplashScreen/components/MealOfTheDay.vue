@@ -14,8 +14,8 @@
 </template>
 
 <script>
-  import MeallieMealCard from "../../../components/MealCard";
-  import MeallieMealCardSkeleton from "../../../components/meal-card-skeleton/MealCardSkeleton";
+  import MeallieMealCard from "../../../../../components/MealCard";
+  import MeallieMealCardSkeleton from "../../../../../components/meal-card-skeleton/MealCardSkeleton";
   export default {
     name: 'MeallieMealOfTheDay',
     components: {MeallieMealCardSkeleton, MeallieMealCard},

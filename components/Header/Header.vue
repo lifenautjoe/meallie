@@ -8,7 +8,7 @@
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <meallie-search-bar></meallie-search-bar>
+          <meallie-search-bar @onSearch="onSearchBarSearch"></meallie-search-bar>
         </div>
       </div>
     </div>
@@ -22,5 +22,10 @@
   export default {
     name: 'MeallieHeader',
     components: {MeallieSearchBar, MeallieLogo},
+    methods: {
+      onSearchBarSearch(queryString){
+        this.$emit('onSearchBarSearch', queryString);
+      }
+    }
   }
 </script>
