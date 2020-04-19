@@ -11,3 +11,12 @@ $family-primary: 'Manrope', sans-serif;
 
 @import "~bulma/bulma";
 @import "~bulma-helpers/bulma-helpers";
+
+.card{
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.media-content{
+  overflow: hidden;
+}

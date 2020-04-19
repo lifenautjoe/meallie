@@ -1,5 +1,5 @@
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -29,6 +29,7 @@ export default {
   */
   plugins: [
     '~/plugins/buefy',
+    '~/plugins/vue-chimera',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -65,5 +66,18 @@ export default {
     routes: [
       '/'
     ]
+  },
+  chimera: {
+    // Server side prefetch will only be available for resources that has `prefetch` and `ssrPrefetch`
+    prefetch: 'get',
+
+    // Enables server side prefetch on resources
+    // true: fetched on server
+    // false: fetched on client
+    // 'override': fetched on server and client (overrided by client)
+    ssrPrefetch: true,
+
+    ssrPrefetchTimeout: 2000 // Server side timeout for prefetch
   }
+
 }

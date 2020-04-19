@@ -1,19 +1,19 @@
 <template>
-  <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
       <div class="navbar-brand has-padding-20">
         <nuxt-link to="/" class="is-flex align-items-center">
           <meallie-logo></meallie-logo>
         </nuxt-link>
       </div>
-
       <div class="navbar-end">
         <div class="navbar-item">
           <meallie-search-bar></meallie-search-bar>
         </div>
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+
 </template>
 
 <script>
