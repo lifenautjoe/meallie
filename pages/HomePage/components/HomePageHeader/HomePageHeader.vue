@@ -8,7 +8,7 @@
       </div>
       <div class="navbar-end">
         <div class="navbar-item">
-          <meallie-search-bar ref="searchBar" @onSearch="onSearchBarSearch" :search-query.sync="searchBarQuery"></meallie-search-bar>
+          <meallie-search-bar ref="searchBar" @onSearch="onSearchBarSearch"></meallie-search-bar>
         </div>
       </div>
     </div>

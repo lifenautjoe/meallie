@@ -35,7 +35,6 @@
     data() {
       return {
         hasSearch: false,
-        headerSearchBarQuery: ''
       }
     },
     chimera: {
