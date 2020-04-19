@@ -27,7 +27,13 @@
     methods: {
       onSearchQueryChanged(value){
         this.$emit('onSearch', value);
+      },
+      // To be used with $ref with parent components
+      clearSearch(){
+        this.searchQuery = '';
+        // When programmatically changing the value, the v-debounce lib doesnt trigger change
+        this.onSearchQueryChanged();
       }
-    }
+    },
   }
 </script>

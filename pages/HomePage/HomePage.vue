@@ -1,8 +1,9 @@
 <template>
   <div>
-    <meallie-header @onSearchBarSearch="onSearchBarSearch"></meallie-header>
+    <meallie-header @onSearchBarSearch="onHeaderSearchBarSearch"></meallie-header>
     <div class="container has-padding-40-touch" v-if="hasSearch">
-      <meallie-search-meal-results-skeleton v-if="getSearchResults.loading && !getSearchResults.data"></meallie-search-meal-results-skeleton>
+      <meallie-search-meal-results-skeleton
+        v-if="getSearchResults.loading && !getSearchResults.data"></meallie-search-meal-results-skeleton>
       <meallie-search-meal-results v-else-if="getSearchResults.data"
                                    :meals="getSearchResults.data"></meallie-search-meal-results>
       <meallie-search-meal-no-results v-else></meallie-search-meal-no-results>
@@ -25,10 +26,12 @@
     components: {
       MeallieSearchMealNoResults,
       MeallieSearchMealResultsSkeleton,
-      MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay},
+      MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay
+    },
     data() {
       return {
         hasSearch: false,
+        headerSearchBarQuery: ''
       }
     },
     chimera: {
@@ -51,7 +54,7 @@
       }
     },
     methods: {
-      onSearchBarSearch(queryString) {
+      onHeaderSearchBarSearch(queryString) {
         if (this.getSearchResults.loading) this.getSearchResults.cancel();
 
         if (queryString) {
@@ -68,7 +71,7 @@
           this.hasSearch = false;
         }
 
-      }
+      },
     }
   }
 </script>
