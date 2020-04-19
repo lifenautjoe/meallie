@@ -1,7 +1,10 @@
 <template>
   <div class="content is-medium">
     <h2 class="has-padding-bottom-20">Step-by-step video</h2>
-    <youtube :video-id="youtubeVideoId" ref="youtube" :fit-parent="true"></youtube>
+    <div class="has-padding-10">
+      <youtube :video-id="youtubeVideoId" ref="youtube" :fit-parent="true" :resize="true"></youtube>
+
+    </div>
   </div>
 </template>
 
