@@ -1,23 +1,15 @@
 <template>
   <div>
     <meallie-header @onSearchBarSearch="onSearchBarSearch"></meallie-header>
-    <div v-if="hasSearch">
-      <div v-if="getSearchResults.loading">
-        Is loading...
-      </div>
+    <div class="container has-padding-40-touch" v-if="hasSearch">
+      <meallie-search-meal-results-skeleton v-if="getSearchResults.loading && !getSearchResults.data"></meallie-search-meal-results-skeleton>
       <meallie-search-meal-results v-else-if="getSearchResults.data"
-                                   :results="getSearchResults.data"></meallie-search-meal-results>
-      <div v-else>
-        No results found
-      </div>
+                                   :meals="getSearchResults.data"></meallie-search-meal-results>
+      <meallie-search-meal-no-results v-else></meallie-search-meal-no-results>
     </div>
     <meallie-splash-screen v-else></meallie-splash-screen>
   </div>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
 
 <script>
   import MeallieMealOfTheDay from "./components/SplashScreen/components/MealOfTheDay";
@@ -25,10 +17,15 @@
   import MeallieSearchBar from "../../components/Header/components/SearchBar";
   import MeallieSplashScreen from "./components/SplashScreen/SplashScreen";
   import MeallieSearchMealResults from "./components/SearchMealResults";
+  import MeallieSearchMealResultsSkeleton from "./components/SearchMealResultsSkeleton";
+  import MeallieSearchMealNoResults from "./components/SearchMealNoResults";
 
   export default {
     name: 'MollieHomePage',
-    components: {MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay},
+    components: {
+      MeallieSearchMealNoResults,
+      MeallieSearchMealResultsSkeleton,
+      MeallieSearchMealResults, MeallieSplashScreen, MeallieSearchBar, MeallieHeader, MeallieMealOfTheDay},
     data() {
       return {
         hasSearch: false,
