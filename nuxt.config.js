@@ -30,6 +30,7 @@ export default {
   plugins: [
     '~/plugins/buefy',
     '~/plugins/vue-chimera',
+    '~/plugins/vue-debounce',
   ],
   /*
   ** Nuxt.js dev-modules

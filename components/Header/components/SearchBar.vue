@@ -3,7 +3,12 @@
     <div class="field">
       <label class="label is-hidden">Search meals</label>
       <div class="control">
-        <input class="input is-rounded is-medium" type="text" placeholder="Search meals..." v-model="searchQuery">
+        <input
+          class="input is-rounded is-medium"
+          type="text"
+          placeholder="Search meals..."
+          v-debounce:500ms="onSearchQueryChanged"
+          v-model="searchQuery">
       </div>
     </div>
   </div>
@@ -16,13 +21,13 @@
     name: 'MeallieSearchBar',
     data() {
       return {
-        searchQuery: 'asd'
+        searchQuery: ''
       }
     },
-    watch:{
-      searchQuery(newVal){
-        this.$emit('onSearch', newVal);
+    methods: {
+      onSearchQueryChanged(value){
+        this.$emit('onSearch', value);
       }
-    },
+    }
   }
 </script>
