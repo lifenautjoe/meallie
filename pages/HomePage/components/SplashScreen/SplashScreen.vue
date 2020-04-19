@@ -3,10 +3,10 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns">
-          <div class="column is-flex justify-center align-items-center">
-            <div class="content is-large">
-              <h1 class="title">Find something new.</h1>
-              <h2 class="subtitle has-text-grey">Fresh meals everyday.</h2>
+          <div class="column is-flex justify-center-tablet align-items-center">
+            <div class="content is-large has-padding-bottom-30-touch">
+              <h1 class="title is-size-3-touch">Find something new.</h1>
+              <h2 class="subtitle has-text-grey is-size-4-touch">Fresh meals everyday.</h2>
             </div>
           </div>
           <div class="column is-flex justify-center align-items-center">
