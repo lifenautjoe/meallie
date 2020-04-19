@@ -4,6 +4,9 @@
     <section class="section container">
       <meallie-meal-page-ingredients :meal="getMeal.data"></meallie-meal-page-ingredients>
     </section>
+    <section class="section container">
+      <meallie-meal-page-instructions :meal="getMeal.data"></meallie-meal-page-instructions>
+    </section>
   </div>
 </template>
 
@@ -13,10 +16,11 @@
 <script>
   import MeallieMealPageHeader from "./components/MealPageHeader";
   import MeallieMealPageIngredients from "./components/MealPageIngredients";
+  import MeallieMealPageInstructions from "./components/MealPageInstructions";
 
   export default {
     name: 'MealPage',
-    components: {MeallieMealPageIngredients, MeallieMealPageHeader},
+    components: {MeallieMealPageInstructions, MeallieMealPageIngredients, MeallieMealPageHeader},
     created() {
       const idMeal = this.$route.params.idMeal;
       this.getMeal.fetch(false, {
