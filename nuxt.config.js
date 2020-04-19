@@ -1,5 +1,5 @@
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
   ** Headers of the page
   */
@@ -10,9 +10,7 @@ export default {
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {hid: 'description', name: 'description', content: process.env.npm_package_description || ''}
     ],
-    link: [
-      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
-    ]
+    link: []
   },
   /*
   ** Customize the progress-bar color
@@ -46,6 +44,8 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    'nuxt-rfg-icon',
+    '@nuxtjs/manifest',
   ],
   /*
   ** Axios module configuration
@@ -79,7 +79,11 @@ export default {
     // 'override': fetched on server and client (overrided by client)
     ssrPrefetch: true,
 
-    ssrPrefetchTimeout: 2000 // Server side timeout for prefetch
+    ssrPrefetchTimeout: 2000, // Server side timeout for prefetch,
+    // Integrate with @nuxt/axios
+    axios() {
+      return this.$axios
+    }
   }
 
 }

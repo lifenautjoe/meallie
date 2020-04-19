@@ -10,7 +10,9 @@
             </div>
           </div>
           <div class="column is-flex justify-center align-items-center">
-            <meallie-meal-of-the-day class="splash-screen-meal-of-the-day"></meallie-meal-of-the-day>
+            <client-only>
+              <meallie-meal-of-the-day class="splash-screen-meal-of-the-day"></meallie-meal-of-the-day>
+            </client-only>
           </div>
         </div>
       </div>

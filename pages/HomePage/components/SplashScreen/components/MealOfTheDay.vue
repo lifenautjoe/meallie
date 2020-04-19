@@ -43,12 +43,14 @@
       }
     },
     methods: {
-      created(){
-
-      },
       refreshMeal(){
         this.getRandomMeal.fetch(true);
       }
     },
+    computed: {
+      meal(){
+        return this.getRandomMeal.data;
+      }
+    }
   }
 </script>
