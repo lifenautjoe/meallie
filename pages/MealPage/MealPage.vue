@@ -4,16 +4,16 @@
     <div v-else-if="getMeal.data">
       <meallie-meal-page-header :meal="meal"></meallie-meal-page-header>
       <section class="section container">
-        <div class="columns">
-          <div class="column has-padding-30">
-            <meallie-meal-page-area :meal="meal"></meallie-meal-page-area>
-            <meallie-meal-page-ingredients :meal="meal"></meallie-meal-page-ingredients>
+        <div class="columns is-gapless">
+          <div class="column">
+            <meallie-meal-page-area :meal="meal" class="has-padding-10"></meallie-meal-page-area>
+            <meallie-meal-page-ingredients :meal="meal" class="has-padding-10 has-padding-bottom-30"></meallie-meal-page-ingredients>
           </div>
-          <div class="column has-padding-30">
-            <meallie-meal-page-instructions :meal="meal"></meallie-meal-page-instructions>
+          <div class="column">
+            <meallie-meal-page-instructions :meal="meal" class="has-padding-10"></meallie-meal-page-instructions>
           </div>
         </div>
-        <meallie-meal-page-video v-if="hasVideo" :meal="meal" class="has-padding-30"></meallie-meal-page-video>
+        <meallie-meal-page-video v-if="hasVideo" :meal="meal" class="has-padding-10"></meallie-meal-page-video>
       </section>
     </div>
     <section v-else class="section container">
