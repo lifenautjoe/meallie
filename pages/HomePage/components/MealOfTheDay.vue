@@ -1,11 +1,11 @@
 <template>
   <div>
     <meallie-meal-card-skeleton v-if="getRandomMeal.loading"></meallie-meal-card-skeleton>
-    <div v-else-if="failedToGetRandomMeal">
-      <span>
+    <div class="content is-rounded" v-else-if="failedToGetRandomMeal">
+      <p>
         Failed to retrieve meal.
-      </span>
-      <button class="button" @click="refreshMeal">
+      </p>
+      <button class="button is-rounded" @click="refreshMeal" :class="{'is-loading': getRandomMeal.loading}">
         Try again
       </button>
     </div>
