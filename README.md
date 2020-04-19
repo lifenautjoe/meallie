@@ -8,6 +8,16 @@ Fresh meals everyday.
 
 This is a repository containing a SPA/Universal application using [TheMealDB](https://www.themealdb.com) to display a random meal on the dashboard page, enable serching the database and display all meal details in a nice way.
 
+## Why?
+
+Personal case study that could serve as a demo application for the following core tools.
+
+
+* [Nuxt](https://nuxtjs.org/)
+* [Bulma](https://bulma.io/)
+* [Buefy](https://buefy.org/)
+* [Vue Chimera](https://github.com/chimera-js/vue-chimera)
+
 ## Demo
 
 [You can see the live demo here.](https://meallie.com)
