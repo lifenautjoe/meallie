@@ -1,6 +1,9 @@
-# meallie
+# Meallie
 
-> Best meals ever.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/447ff5f1-5483-4abc-acd7-026c17f9bb2c/deploy-status)](https://app.netlify.com/sites/meallie/deploys) [![gitmoji badge](https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square)](https://github.com/carloscuesta/gitmoji)
+
+
+Fresh meals everyday.
 
 ## Build Setup
 
