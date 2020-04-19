@@ -8,6 +8,13 @@ Fresh meals everyday.
 
 This is a repository containing a SPA/Universal application using [TheMealDB](https://www.themealdb.com) to display a random meal on the dashboard page, enable serching the database and display all meal details in a nice way.
 
+## Specific features
+
+* Display random meal on each refresh
+* Search TheMealDB database and display results in a nice way
+* Navigate to a meal page with detailed instructions, ingredients and video.
+* Content skeleton for both Meal pages and Meal Cards.
+
 ## Why?
 
 Personal case study that could serve as a demo application for the following core tools.
