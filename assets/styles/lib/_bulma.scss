@@ -1,0 +1,13 @@
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+
+$primary: $black-bis;
+$primary-invert: white;
+$link: $black;
+$link-visited: $black-ter;
+$navbar-height: 4.2 rem;
+
+$family-primary: 'Manrope', sans-serif;
+
+@import "~bulma/bulma";
+@import "~bulma-helpers/bulma-helpers";
