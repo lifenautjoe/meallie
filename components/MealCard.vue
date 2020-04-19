@@ -2,7 +2,7 @@
   <nuxt-link :to="mealUrl">
     <div class="card meallie-meal-card">
       <div class="card-image">
-        <figure class="image">
+        <figure class="image is-square">
           <img :src="meal.strMealThumb" :alt="meal.strMeal + 'Photo depiction'">
         </figure>
       </div>
@@ -37,8 +37,10 @@
   .meallie-meal-card {
     transition: all .2s ease-in-out;
 
+    transform: scale(0.98);
+
     &:hover {
-      transform: scale(1.1);
+      transform: scale(1);
     }
   }
 </style>
