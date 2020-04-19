@@ -47,7 +47,7 @@
       let title;
 
       if(this.meal){
-        title = this.meal.strMeal;
+        title = this.meal.strMeal + ' | Meallie';
       } else{
         title = 'Loading... | Meallie'
       }
