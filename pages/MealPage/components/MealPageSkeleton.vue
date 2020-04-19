@@ -1,5 +1,5 @@
 <template>
-  <skeleton class="hero is-primary is-medium meal-page-skeleton">
+  <header class="hero is-primary is-medium">
     <div class="hero-head">
       <nav class="navbar">
         <div class="container">
@@ -23,7 +23,7 @@
       </div>
     </div>
 
-  </skeleton>
+  </header>
 </template>
 
 <script>

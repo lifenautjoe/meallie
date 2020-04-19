@@ -37,7 +37,6 @@
             this.failedToGetRandomMeal = true;
           } else{
             // Response is an array of objects containing single meal.
-            console.log(response);
             return response['meals'][0];
           }
         }
@@ -48,7 +47,7 @@
 
       },
       refreshMeal(){
-        this.getRandomMeal.fetch();
+        this.getRandomMeal.fetch(true);
       }
     },
   }
