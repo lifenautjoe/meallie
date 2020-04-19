@@ -31,6 +31,7 @@ export default {
     '~/plugins/buefy',
     '~/plugins/vue-chimera',
     '~/plugins/vue-debounce',
+    '~/plugins/vue-youtube',
   ],
   /*
   ** Nuxt.js dev-modules

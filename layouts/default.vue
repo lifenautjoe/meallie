@@ -21,10 +21,9 @@
 </style>
 
 <script>
-import MeallieHeader from "~/components/Header/Header";
 import MeallieFooter from "../components/Footer";
 
 export default {
-  components: {MeallieFooter, MeallieHeader},
+  components: {MeallieFooter},
 }
 </script>
